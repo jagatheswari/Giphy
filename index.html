@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Giphy</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+<body>
+    <div id="btnDiv">
+        <button onclick="getGif('Dog')">Woof</button>
+        <button onclick="getGif('Cat')">Meow</button>
+        <button onclick="getGif('Tiger')">Roar</button>
+        <button onclick="getGif('Elephant')">Trumpet</button>
+        <button onclick="getGif('Kangaroo')">Soft-Cluck</button>
+    </div>
+    <div id="gifDiv"></div>
+    <form>
+            Add an Animal:<br>
+            <input type="text" name="Animalname"><br>
+    </form>
+    <button onclick="add()">Submit</button>
+        <script src="./assets/javascript/app.js"></script>
+</body>
+</html>

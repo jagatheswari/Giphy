@@ -25,13 +25,32 @@ const pausePlay = gif => {
   gif.setAttribute('src', toggle ? animated : still)
 }
 
-document.addEventListener('click', ({ target }) => {
-  switch (target.className) {
+const addanimal = input => {
+    let btnelem = document.createElement('button')
+    btnelem.className = 'getGif'
+    btnelem.setAttribute('data-animal', input)
+    btnelem.textContent = input
+    document.querySelector('#btnDiv').append(btnelem)
+}
+
+document.addEventListener('click', e => {
+  e.preventDefault()
+  switch (e.target.className) {
     case 'getGif':
-      getGif(target.dataset.animal)
+      console.log(e.target)
+      getGif(e.target.dataset.animal)
       break
     case 'gifImg':
-      pausePlay(target)
+      pausePlay(e.target)
+      break
+    default:
+      if(e.target.id === 'add-animal') {
+        console.log("It's working")
+          console.log(document.querySelector('#animal-input').value)
+          let input = document.querySelector("#animal-input").value
+          addanimal(input)
+      }
       break
   }
 })
+

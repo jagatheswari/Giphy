@@ -15,11 +15,19 @@
         <button onclick="getGif('Kangaroo')">Soft-Cluck</button>
     </div>
     <div id="gifDiv"></div>
-    <form>
+    <!-- <form>
             Add an Animal:<br>
             <input type="text" name="Animalname"><br>
+    </form> -->
+    <form id="Animal-form">
+        <label for="animal-input">Animal Search</label>
+        <input type="text" id="animal-input"><br>
+    
+        <!-- Button triggers new animal to be added -->
+        <input id="add-animal" type="submit" value="Search Animal">
     </form>
-    <button onclick="add('Animal-Name')">Submit</button>
+      
+    <!-- <button onclick="add('Animal-Name')">Submit</button> -->
         <script src="./assets/javascript/app.js"></script>
 </body>
 </html>
